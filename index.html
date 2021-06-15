@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display e Float</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: sans-serif;
+          
+        }
+        .grid{
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 58px;
+        }
+
+        .grid .cols{
+            width: 33.33%;
+            height: 300px;
+            float: left;
+            padding: 20px;
+            
+            
+        }
+        .grid::after{
+            content: "";
+            display: block;
+            clear: left;
+            
+        }
+        .grid .col-content{
+            
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            background: red;
+        }
+        .menu{
+            width: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.884);
+        }
+
+        .menu ul{
+            list-style: none;
+            display: block;
+            max-width: 1200px;
+            padding: 0 30px;
+            margin: 0 auto;
+        }
+        .menu ul li{
+            float: left;
+        }
+        .menu ul li a{
+            display: block;
+            color:white;
+            padding: 20px;
+            text-decoration: none;
+            transition: all 300ms ease-in-out;
+
+        }
+        .menu ul li a:hover{
+            background:#333;
+        }
+
+        .full-page{
+            padding: 20px;
+            max-width: 100%;
+            margin: 0 auto;
+            padding-top: 78px;
+            height: 100vh;
+            background: cyan;
+        }
+        .full-page-content{
+            max-width: 1200px;
+            padding: 0 auto;
+            margin: 0 auto;
+        }
+
+
+        @media all and (max-width:568px){
+            .grid .cols{
+                width: 100%;
+            }
+        }
+        @media all and (min-width:569px) and (max-width:768px){
+            .grid .cols{
+                width: 50%;
+            }
+        }
+        @media all and (min-width:769px) and (max-width:1200px){
+            .grid .cols{
+                width: 33.33%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="#grid">Home</a></li>
+            <li><a href="#full-page">Full-Page</a></li>
+            
+        </ul>
+    </nav>
+    <div id ="grid" class="grid">
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        <div class="cols">
+            <div class="col-content">Conteúdo</div>
+        </div>
+        
+    </div>
+    <section id="full-page" class="full-page">
+        
+        <div class="full-page-content">
+            <h1>lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat accusantium consequuntur reiciendis porro molestias alias nesciunt non consectetur necessitatibus incidunt facere, ex labore dicta eum quos dolor. Cumque, commodi eveniet?</p>
+        </div>
+    </section>  
+    
+</body>
+</html>
